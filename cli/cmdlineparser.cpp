@@ -17,9 +17,10 @@
  **/
 
 #include "cmdlineparser.h"
-#include "processorengine.h"
-#include "errorcodes.h"
-#include "tracer.h"
+
+#include <svg2svgt/processorengine.h>
+#include <svg2svgt/errorcodes.h>
+#include <svg2svgt/tracer.h>
 
 #include <iostream>
 #include <cstdlib>

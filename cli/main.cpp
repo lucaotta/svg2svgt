@@ -23,11 +23,13 @@
 #include <cstdlib>
 #include <iostream>
 
+#include <svg2svgt/processorengine.h>
+#include <svg2svgt/ruleengine.h>
+#include <svg2svgt/tracer.h>
+#include <svg2svgt/logger.h>
+
 #include "cmdlineparser.h"
-#include "processorengine.h"
-#include "ruleengine.h"
-#include "tracer.h"
-#include "logger.h"
+
 
 using namespace std;
 

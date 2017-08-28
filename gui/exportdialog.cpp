@@ -18,7 +18,9 @@
 
 #include "exportdialog.h"
 #include "ui_exportdialog.h"
-#include "tracer.h"
+
+#include <svg2svgt/tracer.h>
+
 #include <QtWidgets/QColorDialog>
 
 ExportDialog::ExportDialog(QWidget *parent) :

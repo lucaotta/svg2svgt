@@ -16,11 +16,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
-#include <QtWidgets/QApplication>
-#include <QtCore/QTranslator>
 #include "mainwindow.h"
-#include "tracer.h"
-#include "processorengine.h"
+
+#include <svg2svgt/tracer.h>
+#include <svg2svgt/processorengine.h>
+
+#include <QtWidgets/QApplication>
+#include <QtCore/QDir>
+#include <QtCore/QLibraryInfo>
+#include <QtCore/QTranslator>
 
 int main(int argc, char *argv[])
 {
@@ -30,11 +34,10 @@ int main(int argc, char *argv[])
     // Locale selection
     QTranslator translator;
     QString locale = QLocale::system().name();
-    if(locale.compare("fi_fi", Qt::CaseInsensitive) == 0) {
-      translator.load(QString(":/svg2svgt") + "_fi");
-    } else {
-      translator.load(QString(":/svg2svgt") + "_en");
-    }
+    translator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    translator.load("qtbase_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    QString dataDir = QDir(QApplication::applicationDirPath()).absoluteFilePath("../share/svg2svgt");
+    translator.load(QString("svg2svgt") + "_fi", dataDir);
     a.installTranslator(&translator);
 
     a.setApplicationName(QObject::tr("SVG Converter"));

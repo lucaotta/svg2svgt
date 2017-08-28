@@ -1,4 +1,4 @@
-set APP=..\binaries\svg2svgt.exe
+set APP=%1
 del /y testdata\output\complex\*.*
 for %%f in (testdata\input\complex\*.svg) do %APP% %%f testdata\output\complex\%%~nxf
 

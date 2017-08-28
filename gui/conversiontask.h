@@ -20,7 +20,8 @@
 #define CONVERSIONTASK_H
 
 #include "task.h"
-#include "processorengine.h"
+
+#include <svg2svgt/processorengine.h>
 
 class RuleEngine;
 class ProcessorEngine;

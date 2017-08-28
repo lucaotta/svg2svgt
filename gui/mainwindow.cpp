@@ -24,8 +24,10 @@
 #include "svglistitemdelegate.h"
 #include "conversiontask.h"
 #include "exporttask.h"
-#include "tracer.h"
 
+#include <svg2svgt/tracer.h>
+
+#include <QtCore/QDebug>
 #include <QtCore/QFileInfo>
 #include <QtCore/QMimeData>
 #include <QtCore/QThread>
@@ -45,9 +47,6 @@
 #include <QtGui/QDropEvent>
 #include <QtSvg/QSvgRenderer>
 #include <QWidget>
-
-
-#include <QtCore/QDebug>
 
 #include <iostream>
 

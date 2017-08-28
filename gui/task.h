@@ -21,6 +21,7 @@
 
 #include <QtCore/QRunnable>
 #include <QtCore/QString>
+
 class Logger;
 
 class Task : public QRunnable {

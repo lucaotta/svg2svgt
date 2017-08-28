@@ -17,9 +17,10 @@
  **/
 
 #include "conversiontask.h"
-#include "ruleengine.h"
-#include "processorengine.h"
-#include "tracer.h"
+
+#include <svg2svgt/ruleengine.h>
+#include <svg2svgt/processorengine.h>
+#include <svg2svgt/tracer.h>
 
 #include <QtCore/QObject> // tr
 #include <QtCore/QFileInfo>

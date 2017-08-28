@@ -19,10 +19,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtWidgets/QMainWindow>
 #include "exportdialog.h"
 #include "svglistitemdelegate.h"
 #include "existingfiledialog.h"
+
+#include <QtWidgets/QMainWindow>
 
 // Forward declarations
 namespace Ui {

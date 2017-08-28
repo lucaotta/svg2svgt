@@ -17,8 +17,9 @@
  **/
 
 #include "exporttask.h"
-#include "tracer.h"
-#include "logger.h"
+
+#include <svg2svgt/tracer.h>
+#include <svg2svgt/logger.h>
 
 #include <QtCore/QObject>
 #include <QtCore/QDir>
