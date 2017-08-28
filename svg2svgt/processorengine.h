@@ -58,11 +58,13 @@ public:
 
     // Process the whole pipeline
     int process(const QString& inputFile, const QString& outputFile);
+    QByteArray process(const QByteArray& inputData);
 
 private:
     QDomDocument readInputXML(const QString& inputFile);
     int writeOutputXML(const QString& outputFile, QDomDocument dom);
     void validateFileName(QString fileName);
+    QDomDocument process(QDomDocument& inputDom);
 
 private:
     const RuleEngine& m_rules;

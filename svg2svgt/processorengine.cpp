@@ -102,8 +102,6 @@ int ProcessorEngine::process(const QString& inputFile, const QString& outputFile
     QMutexLocker locker(&m_mutex);
     Tracer trace(Q_FUNC_INFO);
 
-    int retVal = EXIT_SUCCESS;
-
     // First read the input file into QDomDocument
     QDomDocument inputDOM = readInputXML(inputFile);
     if (inputDOM.isNull()) {
@@ -111,9 +109,29 @@ int ProcessorEngine::process(const QString& inputFile, const QString& outputFile
         return EXIT_FAILURE;
     }
 
+    return writeOutputXML(outputFile, process(inputDOM));
+}
+
+QByteArray ProcessorEngine::process(const QByteArray& inputData)
+{
+    QMutexLocker locker(&m_mutex);
+    Tracer trace(Q_FUNC_INFO);
+
+    // First read the input file into QDomDocument
+    QDomDocument inputDOM;
+    inputDOM.setContent(inputData);
+    if (inputDOM.isNull()) {
+	m_logger.error(tr("XML-parsing has failed for input"));
+        return QByteArray();
+    }
+
+    return process(inputDOM).toByteArray();
+}
+
+QDomDocument ProcessorEngine::process(QDomDocument& inputDOM)
+{
     // New dom for SVGT
     QDomDocument outputDOM;
-
     while (!m_steps.isEmpty()) {
         ProcessorStep* step = m_steps.dequeue();
 	//m_logger.message(tr("Running step %1 ...").arg(step->description()));
@@ -140,12 +158,8 @@ int ProcessorEngine::process(const QString& inputFile, const QString& outputFile
         // No ownership
         step = 0;
     }
-
-    retVal = writeOutputXML(outputFile, outputDOM);
-
-    return retVal;
+    return outputDOM;
 }
-
 
 void ProcessorEngine::validateFileName(QString fileName) {
 
