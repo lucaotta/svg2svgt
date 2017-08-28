@@ -27,6 +27,9 @@ class QDomDocument;
 class QDomNode;
 class QDomElement;
 class QDomAttr;
+
+namespace svg2svgt {
+
 class Logger;
 
 class RuleEngine : public QObject
@@ -50,5 +53,7 @@ private:
     QHash<QString, QStringList> m_allowed;
     Logger& m_logger;
 };
+
+} // svg2svgt
 
 #endif // RULEENGINE_H

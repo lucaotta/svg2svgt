@@ -28,6 +28,8 @@
 #include <QtXml/QDomNamedNodeMap>
 #include <QtXmlPatterns/QXmlQuery>
 
+namespace svg2svgt {
+
 NodeFilterStep::NodeFilterStep(const RuleEngine& rules, Logger& logger, QObject *parent) :
     QObject(parent), ProcessorStep(logger), m_rules(rules)
 {
@@ -253,3 +255,4 @@ void NodeFilterStep::walkAttributes(QDomNode node)
 //     return namespaces;
 // }
 
+} // svg2svgt

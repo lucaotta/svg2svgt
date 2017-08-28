@@ -33,6 +33,9 @@
 
 // Forward declarations
 class QDomDocument;
+
+namespace svg2svgt {
+
 class RuleEngine;
 class Logger;
 
@@ -72,5 +75,7 @@ private:
     QMutex m_mutex;
     Logger& m_logger;
 };
+
+} // svg2svgt
 
 #endif // PROCESSORENGINE_H

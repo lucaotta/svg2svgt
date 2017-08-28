@@ -23,6 +23,8 @@
 
 #include <QtCore/QStringList>
 
+namespace svg2svgt {
+
 class EmptyNodeRemoverStep : public QObject, 
         public ProcessorStep
 {
@@ -34,5 +36,7 @@ public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);
     virtual QString description();
 };
+
+} // svg2svgt
 
 #endif // GRADIENTPROCESSORSTEP_H

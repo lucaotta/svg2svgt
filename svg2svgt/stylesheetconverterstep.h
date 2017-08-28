@@ -24,9 +24,9 @@
 #include <QtCore/QStringList>
 #include <QMap>
 
-class StyleSheetConverterStep : public QObject, 
-        public ProcessorStep
+namespace svg2svgt {
 
+class StyleSheetConverterStep : public QObject,  public ProcessorStep
 {
     Q_OBJECT
 public:
@@ -41,5 +41,7 @@ private:
     void convertClassAttributes(QDomDocument svgDoc);
     QMap<QString, QString> m_styleMap;
 };
+
+} // svg2svgt
 
 #endif 

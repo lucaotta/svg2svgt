@@ -26,6 +26,8 @@
 
 #include "nodewalker.h"
 
+namespace svg2svgt {
+
 class NodeFilter {
 public:
     virtual bool operator()(QDomNode node) = 0;
@@ -44,5 +46,7 @@ private:
     NodeFilter* m_filter;
     QList<QDomNode> m_results;
 };
+
+} // svg2svgt
 
 #endif

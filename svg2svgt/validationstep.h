@@ -22,6 +22,8 @@
 #include <QtCore/QObject>
 #include "processorstep.h"
 
+namespace svg2svgt {
+
 class ValidationStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
@@ -34,5 +36,7 @@ public: // From ProcessorStep
 private:
     void checkPathsForEllipticalArcs(QDomDocument svgDoc);
 };
+
+} // svg2svgt
 
 #endif // VALIDATIONSTEP_H

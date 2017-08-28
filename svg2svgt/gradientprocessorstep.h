@@ -24,8 +24,9 @@
 #include <QtCore/QStringList>
 #include "nodewalker.h"
 
-class GradientProcessorStep : public QObject, 
-			      public ProcessorStep
+namespace svg2svgt {
+
+class GradientProcessorStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
@@ -39,5 +40,7 @@ private:
     void convertPercentages(QDomElement elem, QStringList attrs);
     void convertReferences(QDomDocument svgDoc, QList<QDomNode> nodes);
 };
+
+} // svg2svgt
 
 #endif // GRADIENTPROCESSORSTEP_H

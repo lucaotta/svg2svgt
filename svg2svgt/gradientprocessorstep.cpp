@@ -23,6 +23,8 @@
 
 #include "nodefinder.h"
 
+namespace svg2svgt {
+
 GradientProcessorStep::GradientProcessorStep(Logger& logger, QObject *parent) 
     : QObject(parent), ProcessorStep(logger)
 {
@@ -207,7 +209,6 @@ void GradientProcessorStep::convertPercentages(QDomElement elem,
     }
 }
 
-
 // bool GradientProcessorStep::visitNode(QDomNode node) 
 // {
 //     // Replace all opacity-attributes with stroke-opacity and fill-opacity.
@@ -247,3 +248,5 @@ void GradientProcessorStep::convertPercentages(QDomElement elem,
 
 //     return true;
 // }
+
+} // svg2svgt

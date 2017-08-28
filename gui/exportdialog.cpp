@@ -23,6 +23,8 @@
 
 #include <QtWidgets/QColorDialog>
 
+using svg2svgt::Tracer;
+
 ExportDialog::ExportDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ExportDialog), m_colorDialog(0), m_color(Qt::transparent), m_maintainAspectRatio(false)

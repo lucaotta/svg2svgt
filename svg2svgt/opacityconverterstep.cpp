@@ -19,6 +19,8 @@
 #include "opacityconverterstep.h"
 #include "tracer.h"
 
+namespace svg2svgt {
+
 OpacityConverterStep::OpacityConverterStep(Logger& logger, QObject *parent) :
     QObject(parent),
     ProcessorStep(logger)
@@ -75,3 +77,5 @@ bool OpacityConverterStep::visitNode(QDomNode node)
 
     return true;
 }
+
+} // svg2svgt

@@ -25,6 +25,8 @@
 #include <QDomNode>
 #include "processorstep.h"
 
+namespace svg2svgt {
+
 class RuleEngine;
 class Logger;
 
@@ -51,5 +53,7 @@ private:
     QList<QPair<QDomNode,int> > m_removedNodes;
     int m_inkscapeWarningCount;
 };
+
+} // svg2svgt
 
 #endif // FILTERSTEP_H

@@ -32,6 +32,7 @@
 
 
 using namespace std;
+using namespace svg2svgt;
 
 void printOutput(Logger& logger);
 

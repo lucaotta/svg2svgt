@@ -31,11 +31,12 @@
 #include <QtXml/QDomAttr>
 #include <QtXml/QDomElement>
 
+namespace svg2svgt {
+
 RuleEngine::RuleEngine(Logger& logger, QObject *parent) :
     QObject(parent), m_logger(logger)
 {
     Tracer trace(Q_FUNC_INFO);
-
 }
 
 RuleEngine::~RuleEngine()
@@ -174,7 +175,6 @@ int RuleEngine::handleAllowedElement(const QDomElement& element, QStringList& al
     return EXIT_SUCCESS;
 }
 
-
 void RuleEngine::dumpRules()
 {
     Tracer trace(Q_FUNC_INFO);
@@ -187,3 +187,5 @@ void RuleEngine::dumpRules()
         }
     }
 }
+
+} // svg2svgt

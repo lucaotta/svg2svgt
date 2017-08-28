@@ -22,6 +22,8 @@
 #include <QtCore/QStringList>
 #include <QtCore/QObject>
 
+namespace svg2svgt {
+
 class Logger : public QObject
 {
     Q_OBJECT
@@ -44,5 +46,7 @@ private:
     QStringList m_errors;
     QStringList m_warnings;
 };
+
+} // svg2svgt
 
 #endif // LOGGER_H

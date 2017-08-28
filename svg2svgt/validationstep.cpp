@@ -20,6 +20,8 @@
 #include "nodefinder.h"
 #include "tracer.h"
 
+namespace svg2svgt {
+
 ValidationStep::ValidationStep(Logger& logger, QObject *parent) :
     QObject(parent),
     ProcessorStep(logger)
@@ -37,7 +39,6 @@ static struct ImageFilter : public NodeFilter {
 	return node.toElement().tagName() == "image";
     }
 } imageFilter;
-
 
 QDomDocument ValidationStep::process(QDomDocument svgDoc)
 {
@@ -70,4 +71,4 @@ QString ValidationStep::description()
     return tr("Validation");
 }
 
-
+} // svg2svgt

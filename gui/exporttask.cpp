@@ -28,10 +28,12 @@
 #include <QtGui/QPainter>
 #include <QtCore/QDebug>
 
+using svg2svgt::Tracer;
+
 ExportTask::ExportTask(const QString& filename, const QString& outputDir, QSize size, QColor background) :
     Task(filename), m_outputDir(outputDir), m_size(size), m_background(background)
 {
-    m_logger = new Logger;
+    m_logger = new svg2svgt::Logger;
     Tracer trace(Q_FUNC_INFO);
     QDir dir(m_outputDir);
     if (!dir.exists()) {

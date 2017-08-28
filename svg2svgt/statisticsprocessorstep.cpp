@@ -21,6 +21,8 @@
 #include "tracer.h"
 #include "nodefinder.h"
 
+namespace svg2svgt {
+
 StatisticsProcessorStep::StatisticsProcessorStep(Logger& logger, QObject *parent) :
     QObject(parent),
     ProcessorStep(logger)
@@ -31,7 +33,6 @@ StatisticsProcessorStep::StatisticsProcessorStep(Logger& logger, QObject *parent
 StatisticsProcessorStep::~StatisticsProcessorStep()
 {
     Tracer trace(Q_FUNC_INFO);
-
 }
 
 struct NodeCounterFilter : public NodeFilter {
@@ -70,3 +71,5 @@ QString StatisticsProcessorStep::description()
     Tracer trace(Q_FUNC_INFO);
     return tr("Statistics");
 }
+
+} // svg2svgt

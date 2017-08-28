@@ -28,7 +28,7 @@
 
 int main(int argc, char *argv[])
 {
-    Tracer trace(Q_FUNC_INFO);
+    svg2svgt::Tracer trace(Q_FUNC_INFO);
     QApplication a(argc, argv);
    
     // Locale selection
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&translator);
 
     a.setApplicationName(QObject::tr("SVG Converter"));
-    a.setApplicationVersion(ProcessorEngine::getVersionString());
+    a.setApplicationVersion(svg2svgt::ProcessorEngine::getVersionString());
     a.setWindowIcon(QIcon(":/gfx/svg2svgt.png"));
 
     MainWindow w;

@@ -22,6 +22,8 @@
 #include "nodefinder.h"
 #include "tracer.h"
 
+namespace svg2svgt {
+
 StyleSheetConverterStep::StyleSheetConverterStep(Logger& logger, QObject *parent) :
     QObject(parent),
     ProcessorStep(logger)
@@ -155,3 +157,5 @@ QString StyleSheetConverterStep::description()
     Tracer trace(Q_FUNC_INFO);
     return tr("Style sheet converter");
 }
+
+} // svg2svgt

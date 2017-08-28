@@ -18,8 +18,6 @@
 
 #include "svglistitemdelegate.h"
 
-#include <svg2svgt/tracer.h>
-
 #include <QtGui/QPainter>
 #include <QtGui/QPixmapCache>
 #include <QtSvg/QSvgRenderer>

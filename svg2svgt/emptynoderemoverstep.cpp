@@ -22,6 +22,8 @@
 #include "nodefinder.h"
 #include "tracer.h"
 
+namespace svg2svgt {
+
 EmptyNodeRemoverStep::EmptyNodeRemoverStep(Logger& logger, QObject *parent) :
     QObject(parent),
     ProcessorStep(logger)
@@ -58,3 +60,5 @@ QString EmptyNodeRemoverStep::description()
     Tracer trace(Q_FUNC_INFO);
     return tr("Empty node remover");
 }
+
+} // svg2svgt

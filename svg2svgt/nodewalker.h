@@ -22,6 +22,8 @@
 #include <QDebug>
 #include <QDomNode>
 
+namespace svg2svgt {
+
 class NodeWalker
 {
 public:
@@ -45,5 +47,7 @@ public:
 	}
     }
 };
+
+} // svg2svgt
 
 #endif

@@ -28,6 +28,7 @@
 using std::cout;
 using std::cerr;
 using std::endl;
+using svg2svgt::Tracer;
 
 CmdLineParser::CmdLineParser(int argc, char *argv[], QObject *parent) :
     QObject(parent), m_argCount(argc), m_argArray(argv)
@@ -47,14 +48,14 @@ int CmdLineParser::parseParameters(CmdLine& param)
     if (m_argCount < 3) {
         cerr << tr("ERROR: Too few parameters").toStdString() << endl << endl;
         printUsage();
-        return ERROR_PARAMETERS;
+        return svg2svgt::ERROR_PARAMETERS;
     }
 
     // Input file must end with .svg
     param.inputFile = QString(m_argArray[1]);
     if (!param.inputFile.endsWith(".svg")) {
         cerr << tr("ERROR: input file not SVG").toStdString() << endl;
-        return ERROR_FILENAME;
+        return svg2svgt::ERROR_FILENAME;
     }
     // Add .svg if output file doesn't have it
     param.outputFile = QString(m_argArray[2]);
@@ -68,7 +69,7 @@ int CmdLineParser::parseParameters(CmdLine& param)
 void CmdLineParser::printUsage()
 {
     Tracer trace(Q_FUNC_INFO);
-    cout << ProcessorEngine::getVersionString().toStdString() << endl << endl;
+    cout << svg2svgt::ProcessorEngine::getVersionString().toStdString() << endl << endl;
     cout << tr("Usage: svg2svgt inputfile outputfile").toStdString() << endl;
 }
 

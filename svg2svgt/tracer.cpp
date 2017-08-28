@@ -22,24 +22,24 @@
 
 using namespace std;
 
-Tracer::Tracer(const char* method) 
+// Comment this line to remove function call tracing output
+//#define TRACING_ON
+#define PREFIX "SVG"
+
+namespace svg2svgt {
+
+Tracer::Tracer(const char* method)
 {
 #ifdef TRACING_ON
     m_method = method;
     cout << "[" PREFIX << "][TRACE][IN ] " << m_method << endl;
 #endif
 }
+
 Tracer::~Tracer(){
 #ifdef TRACING_ON
      cout << "[" << PREFIX << "][TRACE][OUT] " << m_method << endl;
 #endif
 }
 
-
-
-
-
-
-
-
-
+} // svg2svgt

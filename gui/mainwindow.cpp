@@ -52,6 +52,7 @@
 
 using std::cerr;
 using std::endl;
+using svg2svgt::Tracer;
 
 static const int THUMBNAIL_SIZE = 128;
 
@@ -440,7 +441,7 @@ static int displayableCount(const QStringList& stringList, bool skipHeaders)
     return count;
 }
 
-void MainWindow::updateMessages(const Logger& logger)
+void MainWindow::updateMessages(const svg2svgt::Logger& logger)
 {
     Tracer trace(Q_FUNC_INFO);
 

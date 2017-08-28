@@ -18,6 +18,8 @@
 
 #include "logger.h"
 
+namespace svg2svgt {
+
 Logger::Logger(QObject* parent)
     : QObject(parent)
 {
@@ -75,10 +77,4 @@ const QStringList& Logger::errors() const
     return m_errors;
 }
 
-
-
-
-
-
-
-
+} // svg2svgt

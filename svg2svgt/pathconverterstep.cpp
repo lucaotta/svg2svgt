@@ -23,6 +23,8 @@
 #include <qmath.h>
 const qreal Q_PI = 3.1415926535;
 
+namespace svg2svgt {
+
 PathConverterStep::PathConverterStep(Logger& logger, QObject *parent) :
     QObject(parent),
     ProcessorStep(logger)
@@ -408,3 +410,5 @@ void PathConverterStep::convertEllipticalArcs(QDomDocument svgDoc)
 	attr.setValue(d);
     }
 }
+
+} // svg2svgt

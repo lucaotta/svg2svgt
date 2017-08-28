@@ -19,9 +19,9 @@
 #include "nodefinder.h"
 #include "tracer.h"
 
+namespace svg2svgt {
 
-QList<QDomNode> NodeFinder::find(QDomNode node,
-				 NodeFilter* filter) {
+QList<QDomNode> NodeFinder::find(QDomNode node, NodeFilter* filter) {
     Q_ASSERT(filter);
     Tracer trace(Q_FUNC_INFO);
     NodeFinder finder(node, filter);
@@ -58,6 +58,4 @@ bool NodeFinder::visitNode(QDomNode node) {
     return true; // continue walking
 }
 
-
-
-
+} // svg2svgt

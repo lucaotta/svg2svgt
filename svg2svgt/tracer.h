@@ -19,9 +19,7 @@
 #ifndef TRACER_H
 #define TRACER_H
 
-// Comment this line to remove function call tracing output
-//#define TRACING_ON
-#define PREFIX "SVG"
+namespace svg2svgt {
 
 class Tracer
 {
@@ -32,5 +30,7 @@ private:
     Tracer(); 
     const char* m_method;
 };
+
+} // svg2svgt
 
 #endif // TRACER_H

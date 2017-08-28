@@ -19,6 +19,8 @@
 #ifndef ERRORCODES_H
 #define ERRORCODES_H
 
+namespace svg2svgt {
+
 // Own error codes
 static const int ERROR_PARAMETERS    = -1;
 static const int ERROR_FILENAME      = -2;
@@ -27,5 +29,7 @@ static const int ERROR_PARSING_FILE  = -4;
 static const int ERROR_WRITING_FILE  = -5;
 static const int ERROR_READING_RULES = -6;
 static const int ERROR_PARSING_RULES = -7;
+
+} // svg2svgt
 
 #endif // ERRORCODES_H

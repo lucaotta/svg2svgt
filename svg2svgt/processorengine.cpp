@@ -39,6 +39,8 @@
 #include "stylesheetconverterstep.h"
 
 const char* VERSION = "0.9.5";
+namespace svg2svgt {
+
 
 QString ProcessorEngine::getVersionString()
 {
@@ -237,3 +239,5 @@ int ProcessorEngine::writeOutputXML(const QString& outputFile, QDomDocument dom)
 
     return EXIT_SUCCESS;
 }
+
+} // svg2svgt

@@ -27,6 +27,8 @@
 // Typedefs
 // typedef QSharedPointer<QDomDocument> DomPointer;
 
+namespace svg2svgt {
+
 class ProcessorStep
 {
     // Public interface that all ProcessorSteps must implement
@@ -42,5 +44,7 @@ protected:
     Q_DISABLE_COPY(ProcessorStep);
     Logger& m_logger;
 };
+
+} // svg2svgt
 
 #endif // PROCESSORSTEP_H

@@ -23,6 +23,8 @@
 #include "processorstep.h"
 #include "nodewalker.h"
 
+namespace svg2svgt {
+
 class OpacityConverterStep : public QObject, 
         public ProcessorStep,
         public NodeWalker::Visitor
@@ -37,5 +39,7 @@ public: // From ProcessorStep
     // From NodeWalker::Visitor
     bool visitNode(QDomNode node);
 };
+
+} // svg2svgt
 
 #endif // OPACITYCONVERTERSTEP_H

@@ -22,6 +22,8 @@
 #include <QtCore/QObject>
 #include "processorstep.h"
 
+namespace svg2svgt {
+
 class FillConverterStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
@@ -34,5 +36,7 @@ public: // From ProcessorStep
 private:
     void convertFillAttributes(QDomDocument svgDoc);
 };
+
+} // svg2svgt
 
 #endif

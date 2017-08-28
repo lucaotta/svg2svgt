@@ -22,6 +22,7 @@
 #include <QtCore/QObject>
 #include "processorstep.h"
 
+namespace svg2svgt {
 
 class StatisticsProcessorStep: public QObject, public ProcessorStep
 {
@@ -33,5 +34,7 @@ public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);
     virtual QString description();
 };
+
+} // svg2svgt
 
 #endif // STATISTICSPROCESSORSTEP_H

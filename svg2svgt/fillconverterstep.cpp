@@ -20,6 +20,8 @@
 #include "tracer.h"
 #include "nodefinder.h"
 
+namespace svg2svgt {
+
 FillConverterStep::FillConverterStep(Logger& logger, QObject *parent) :
     QObject(parent), ProcessorStep(logger)
 { 
@@ -133,3 +135,5 @@ void FillConverterStep::convertFillAttributes(QDomDocument svgDoc)
 	}
     }
 }
+
+} // svg2svgt

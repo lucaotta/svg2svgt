@@ -41,7 +41,10 @@ class QProgressBar;
 class QStandardItemModel;
 class QDragEnterEvent;
 class QDropEvent;
+
+namespace svg2svgt {
 class Logger;
+}
 
 typedef QPair<QModelIndex, FileAction> ActionPair;
 typedef QList<ActionPair> ActionList;
@@ -78,7 +81,7 @@ private:
     void doExport(const QModelIndexList& files, const QString& outputDir, QList<QSize> sizes, QColor background);
     bool checkOutputFiles(const QModelIndexList& files, ActionList& actions);
     void resetBeforeStart();
-    void updateMessages(const Logger& logger);
+    void updateMessages(const svg2svgt::Logger& logger);
     int showExportDialog();
     void deleteTemporaries();
     QString getConversionOutputFilename(const QString& filename);
