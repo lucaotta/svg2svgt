@@ -38,9 +38,9 @@
 #include "fillconverterstep.h"
 #include "stylesheetconverterstep.h"
 
-const char* VERSION = "0.9.5";
 namespace svg2svgt {
 
+const char* VERSION = SVG2SVGT_VERSION;
 
 QString ProcessorEngine::getVersionString()
 {
