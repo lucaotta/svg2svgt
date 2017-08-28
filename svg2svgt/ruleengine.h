@@ -39,6 +39,7 @@ public:
     explicit RuleEngine(Logger& logger, QObject *parent = 0);
     virtual ~RuleEngine();
 
+    int setDefaultRules();
     int setRulesFile(const QString& ruleFilename);
     bool isAcceptableNode(QDomNode& node) const;
     bool isAcceptableAttribute(QDomNode& node, QDomAttr& attr) const;

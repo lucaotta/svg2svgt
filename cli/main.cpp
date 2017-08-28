@@ -36,8 +36,6 @@ using namespace svg2svgt;
 
 void printOutput(Logger& logger);
 
-static const QString RULES_FILE(":/rules.xml");
-
 int main(int argc, char *argv[])
 {
     Tracer trace(Q_FUNC_INFO);
@@ -55,7 +53,7 @@ int main(int argc, char *argv[])
 
     // Create the engines
     QScopedPointer<RuleEngine> rules(new RuleEngine(logger));
-    retVal = rules->setRulesFile(RULES_FILE);
+    retVal = rules->setDefaultRules();
     if (retVal) {
         printOutput(logger);
         return retVal;

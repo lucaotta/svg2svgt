@@ -44,6 +44,12 @@ RuleEngine::~RuleEngine()
     Tracer trace(Q_FUNC_INFO);
 }
 
+int RuleEngine::setDefaultRules()
+{
+    static const QString RULES_FILE(":/rules.xml");
+    return setRulesFile(RULES_FILE);
+}
+
 int RuleEngine::setRulesFile(const QString& ruleFilename)
 {
     Tracer trace(Q_FUNC_INFO);
