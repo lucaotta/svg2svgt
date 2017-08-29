@@ -44,3 +44,7 @@ ENDIF(MINGW)
 
 
 INSTALL(TARGETS svg2svgt-gui DESTINATION bin)
+INSTALL(FILES gfx/svg2svgt.png DESTINATION share/icons/hicolor/64x64/apps/)
+INSTALL(FILES gfx/svg2svgt.svg DESTINATION share/icons/hicolor/scalable/apps/)
+INSTALL(FILES svg2svgt.appdata.xml DESTINATION share/metainfo)
+INSTALL(FILES svg2svgt.desktop DESTINATION share/applications)
