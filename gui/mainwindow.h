@@ -57,6 +57,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     virtual ~MainWindow();
+    void addFiles(const QStringList& filenames);
 protected:
     void dragEnterEvent(QDragEnterEvent* event);
     void dropEvent(QDropEvent* event);
@@ -76,7 +77,6 @@ private:
     void updateOutputDir(const QString& dir);
     QModelIndexList getSelectedFiles();
     QModelIndexList getAllFiles();
-    void addFiles(const QStringList& filenames);
     void doConversion(const QModelIndexList& files, const QString& outputDir);
     void doExport(const QModelIndexList& files, const QString& outputDir, QList<QSize> sizes, QColor background);
     bool checkOutputFiles(const QModelIndexList& files, ActionList& actions);

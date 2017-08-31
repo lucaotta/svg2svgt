@@ -45,6 +45,16 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon(":/gfx/svg2svgt.png"));
 
     MainWindow w;
+    QStringList files;
+    for(int i = 1; i < argc; ++i) {
+      QFile file(argv[i]);
+      if(file.exists() && file.fileName().endsWith(".svg", Qt::CaseInsensitive)) {
+        files.append(file.fileName());
+      }
+    }
+    if(!files.isEmpty()) {
+      w.addFiles(files);
+    }
     w.show();
 
     return a.exec();
