@@ -21,6 +21,7 @@
 
 #include <svg2svgt/tracer.h>
 
+#include <QtGui/QValidator>
 #include <QtWidgets/QColorDialog>
 
 using svg2svgt::Tracer;
