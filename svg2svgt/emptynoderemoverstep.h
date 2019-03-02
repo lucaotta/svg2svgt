@@ -30,7 +30,7 @@ class EmptyNodeRemoverStep : public QObject,
 {
     Q_OBJECT
 public:
-    explicit EmptyNodeRemoverStep(Logger& logger, QObject *parent = 0);
+    explicit EmptyNodeRemoverStep(Logger& logger, QObject *parent = nullptr);
     virtual ~EmptyNodeRemoverStep();
 public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);

@@ -28,7 +28,7 @@ class StatisticsProcessorStep: public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit StatisticsProcessorStep(Logger& logger, QObject *parent = 0);
+    explicit StatisticsProcessorStep(Logger& logger, QObject *parent = nullptr);
     virtual ~StatisticsProcessorStep();
 public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);

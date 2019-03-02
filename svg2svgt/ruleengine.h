@@ -36,7 +36,7 @@ class RuleEngine : public QObject
 {
     Q_OBJECT
 public:
-    explicit RuleEngine(Logger& logger, QObject *parent = 0);
+    explicit RuleEngine(Logger& logger, QObject *parent = nullptr);
     virtual ~RuleEngine();
 
     int setDefaultRules();

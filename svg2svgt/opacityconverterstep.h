@@ -31,7 +31,7 @@ class OpacityConverterStep : public QObject,
 {
     Q_OBJECT
 public:
-    explicit OpacityConverterStep(Logger& logger, QObject *parent = 0);
+    explicit OpacityConverterStep(Logger& logger, QObject *parent = nullptr);
     virtual ~OpacityConverterStep();
 public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);

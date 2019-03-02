@@ -28,7 +28,7 @@ class ValidationStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit ValidationStep(Logger& logger, QObject *parent = 0);
+    explicit ValidationStep(Logger& logger, QObject *parent = nullptr);
     virtual ~ValidationStep();
 public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);

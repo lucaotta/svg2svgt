@@ -30,7 +30,7 @@ class StyleSheetConverterStep : public QObject,  public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit StyleSheetConverterStep(Logger& logger, QObject *parent = 0);
+    explicit StyleSheetConverterStep(Logger& logger, QObject *parent = nullptr);
     virtual ~StyleSheetConverterStep();
 
 public: // From ProcessorStep
