@@ -29,7 +29,7 @@ class Logger : public QObject
     Q_OBJECT
 
 public:
-    Logger(QObject* parent = 0);
+    Logger(QObject* parent = nullptr);
     ~Logger();
 
     void clear();

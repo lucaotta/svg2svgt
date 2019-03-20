@@ -30,7 +30,7 @@ class GradientProcessorStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit GradientProcessorStep(Logger& logger, QObject *parent = 0);
+    explicit GradientProcessorStep(Logger& logger, QObject *parent = nullptr);
     virtual ~GradientProcessorStep();
 
 public: // From ProcessorStep

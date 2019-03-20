@@ -48,7 +48,7 @@ class ProcessorEngine : public QObject
 {
     Q_OBJECT
 public:
-    explicit ProcessorEngine(const RuleEngine& rules, Logger& logger, QObject *parent = 0);
+    explicit ProcessorEngine(const RuleEngine& rules, Logger& logger, QObject *parent = nullptr);
     static QString getVersionString();
     static QString getVersionStringFormatted();
 public:

@@ -28,7 +28,7 @@ class FillConverterStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit FillConverterStep(Logger& logger, QObject *parent = 0);
+    explicit FillConverterStep(Logger& logger, QObject *parent = nullptr);
     virtual ~FillConverterStep();
 public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);

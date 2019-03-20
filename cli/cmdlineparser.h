@@ -30,7 +30,7 @@ class CmdLineParser : public QObject
 {
     Q_OBJECT
 public:
-    explicit CmdLineParser(int argc, char *argv[], QObject *parent = 0);
+    explicit CmdLineParser(int argc, char *argv[], QObject *parent = nullptr);
     virtual ~CmdLineParser();
 
     int parseParameters(CmdLine& param);

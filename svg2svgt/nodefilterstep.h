@@ -34,7 +34,7 @@ class NodeFilterStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit NodeFilterStep(const RuleEngine& rules, Logger& logger, QObject *parent = 0);
+    explicit NodeFilterStep(const RuleEngine& rules, Logger& logger, QObject *parent = nullptr);
     virtual ~NodeFilterStep();
 public: // From ProcessorStep
     virtual QDomDocument preProcess(QDomDocument svgDoc);

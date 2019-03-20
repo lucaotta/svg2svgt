@@ -28,7 +28,7 @@ class PathConverterStep : public QObject, public ProcessorStep
 {
     Q_OBJECT
 public:
-    explicit PathConverterStep(Logger& logger, QObject *parent = 0);
+    explicit PathConverterStep(Logger& logger, QObject *parent = nullptr);
     virtual ~PathConverterStep();
 public: // From ProcessorStep
     virtual QDomDocument process(QDomDocument svgDoc);
